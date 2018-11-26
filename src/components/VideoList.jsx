@@ -1,6 +1,6 @@
 import VideoListEntry from './VideoListEntry.js';
 
-var VideoList = () => (
+var VideoList = (props) => (
   <div className="video-list">
     <div><h5><em>videoListEntry</em> <VideoListEntry /></h5></div>
     <div><h5><em>videoListEntry</em> <VideoListEntry /></h5></div>
