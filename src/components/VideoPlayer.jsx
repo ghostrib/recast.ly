@@ -4,8 +4,8 @@ var VideoPlayer = (props) => (
       <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/4ZAEBxGipoA?autoplay=1" allowFullScreen></iframe>
     </div>
     <div className="video-player-details">
-      <h3>{props.videoTitle}</h3>
-      <div>{props.videoDescription}</div>
+      <h3>{'NO'}</h3>
+      <div>{'POPCORN'}</div>
     </div>
   </div >
 );

@@ -7,7 +7,12 @@ console.log(exampleVideoData);
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      videos: exampleVideoData,
+      currentVideo: exampleVideoData[0],
+    }
   }
+
 
   render() {
     return (
@@ -20,15 +25,13 @@ class App extends React.Component {
         <div className="row">
           <div className="col-md-7">
             <div><h5><em>VideoPlayer</em> <VideoPlayer
-              video={'https://youtube.com/embed/' + exampleVideoData[1].id.video + '?autoplay=1'}
-              videoTitle={exampleVideoData[1].snippet.title}
-              videoDescription={exampleVideoData[1].snippet.description}
+              video={this.state.currentVideo}
             /></h5></div>
           </div>
           <div className="col-md-5">
-            <div><h5><em>videoList</em> <VideoList
-              videoData={exampleVideoData}
-            /></h5></div>
+            <VideoList
+              videos={this.state.videos}
+            />
           </div>
         </div>
       </div>
